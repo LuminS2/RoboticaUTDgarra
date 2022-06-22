@@ -1,0 +1,47 @@
+#include <Servo.h>
+
+#include <NewPing.h>
+
+int servo180 = 6;
+int servo90 = 9;
+int servo60 = 10;
+int servo50 = 11;
+const int trigPin = 12;
+const int echoPin = 11;
+ 
+void setup() {
+pinMode(trigPin, OUTPUT);
+pinMode(echoPin, INPUT);
+Serial.begin(9600);
+pinMode(servo50, OUTPUT);
+}
+ 
+void loop()
+{
+long duration, cm;
+ for()
+analogWrite(servo50);
+digitalWrite(trigPin, LOW);
+delayMicroseconds(2);
+digitalWrite(trigPin, HIGH);
+delayMicroseconds(5);
+digitalWrite(trigPin, LOW);
+ 
+duration = pulseIn(echoPin, HIGH);
+ 
+// convert the time into a distance
+
+cm = microsecondsToCentimeters(duration);
+ 
+
+Serial.print(cm);
+Serial.print("cm");
+Serial.println();
+ 
+delay(100);
+}
+ 
+
+long microsecondsToCentimeters(long microseconds)
+{
+}
